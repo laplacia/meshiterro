@@ -18,7 +18,7 @@
                 </div>
               </div>
 
-              <dsiv class="block-content">
+              <div class="block-content">
                 <%= attachment_image_tag post_image.user, :profile_image, class: "img-circle pull-left profile-thumb" %>
                 <h3 class="block-title">
                   <%= link_to post_image_path(post_image.id) do %>
@@ -39,10 +39,11 @@
           </div>
 
           <% end %>
+          <%= paginate post_images, class: "pagenate" %>
 
         </div>
       </div>
     </div>
   </div>
-   <%= paginate post_images, class: "pagenate" %>
+
 </section>
